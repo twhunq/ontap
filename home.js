@@ -16,11 +16,17 @@ const quizzes = [
     },
     {
         id: 3,
-        title: 'Chủ đề 3: Sắp ra mắt',
-        description: 'Nội dung đang được cập nhật...',
-        questionCount: 0,
-        file: '#',
-        disabled: true
+        title: 'Chủ đề 3: Mối quan hệ biện chứng giữa vật chất và ý thức',
+        description: 'Tìm hiểu về mối quan hệ biện chứng giữa vật chất và ý thức, vai trò quyết định của vật chất đối với ý thức và tính năng động của ý thức.',
+        questionCount: 30,
+        file: 'quiz3.html'
+    },
+    {
+        title: 'Bài kiểm tra kỹ năng 1: Tổng hợp chủ đề 1, 2, 3',
+        description: 'Bài kiểm tra tổng hợp toàn bộ kiến thức từ 3 chủ đề đầu tiên, giúp củng cố và đánh giá mức độ nắm vững kiến thức.',
+        questionCount: 91,
+        file: 'test1.html',
+        isSkillTest: true
     }
 ];
 
@@ -42,8 +48,10 @@ function renderQuizList() {
             };
         }
 
+        const quizNumber = quiz.isSkillTest ? '' : `<div class="quiz-number">Bài ${quiz.id}</div>`;
+
         card.innerHTML = `
-            <div class="quiz-number">Bài ${quiz.id}</div>
+            ${quizNumber}
             <h2>${quiz.title}</h2>
             <p class="quiz-description">${quiz.description}</p>
             <div class="quiz-meta">
