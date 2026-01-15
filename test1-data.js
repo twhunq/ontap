@@ -12,7 +12,7 @@ const questions = [
             "D. Ai Cập, Ấn Độ, Trung Quốc"
         ],
         correct: [2] // C is index 2
-    },
+    }},
     {
         id: 2,
         text: "Câu 2: Triết học ra đời từ đâu?",
@@ -24,7 +24,7 @@ const questions = [
             "D. Từ thực tiễn, do nhu cầu của thực tiễn"
         ],
         correct: [3] // D
-    },
+    }},
     {
         id: 3,
         text: "Câu 3: Chỉ ra những phát biểu nào Đúng, phát biểu nào Sai:",
@@ -51,7 +51,7 @@ const questions = [
                 correct: 1 // Đúng
             }
         ]
-    },
+    }},
     {
         id: 4,
         text: "Câu 4: Khẳng định nào sau đây về triết học Mác - Lênin là sai?",
@@ -63,7 +63,7 @@ const questions = [
             "D. Triết học Mác - Lênin là chủ nghĩa duy vật biện chứng"
         ],
         correct: [2] // C
-    },
+    }},
     {
         id: 5,
         text: "Câu 5: Các hình thức của chủ nghĩa duy tâm là:",
@@ -75,7 +75,7 @@ const questions = [
             "D. Chủ nghĩa duy tâm khách quan và chủ nghĩa duy tâm chủ quan"
         ],
         correct: [3] // D
-    },
+    }},
     {
         id: 6,
         text: "Câu 6: Những phát minh của khoa học tự nhiên nửa đầu thế kỷ XIX đã cung cấp cơ sở tri thức khoa học cho sự phát triển của cái gì?",
@@ -87,7 +87,7 @@ const questions = [
             "D. Phát triển phép biện chứng tự phát"
         ],
         correct: [2] // C
-    },
+    }},
     {
         id: 7,
         text: "Câu 7: Biểu hiện nào sau đây phản ánh đúng bản chất của cuộc cách mạng khoa học và công nghệ hiện đại?",
@@ -99,7 +99,7 @@ const questions = [
             "D. Tăng trưởng dân số nhanh chóng"
         ],
         correct: [2] // C
-    },
+    }},
     {
         id: 8,
         text: "Câu 8: Trong sự phát triển của xã hội hiện đại, triết học Mác - Lênin đóng vai trò gì?",
@@ -111,7 +111,7 @@ const questions = [
             "D. Bảo vệ lợi ích của chủ nghĩa tư bản"
         ],
         correct: [0] // A
-    },
+    }},
     {
         id: 9,
         text: "Câu 9: Triết học Mác - Lênin nói chung có giá trị định hướng quan trọng cho con người trong nhận thức và hoạt động thực tiễn của mình vì:",
@@ -123,7 +123,7 @@ const questions = [
             "D. Triết học Mác - Lênin luôn đúng trong nhận thức và hoạt động thực tiễn"
         ],
         correct: [0] // A
-    },
+    }},
     {
         id: 10,
         text: "Câu 10: Việc vận dụng sai lệch triết học Mác - Lênin dẫn đến hậu quả nào? (Chọn 2 đáp án)",
@@ -135,7 +135,7 @@ const questions = [
             "D. Phát triển nhanh chóng nền kinh tế"
         ],
         correct: [0, 1] // A & B
-    },
+    }},
     {
         id: 11,
         text: "Câu 11: Triết học Mác - Lênin có vai trò quan trọng trong việc phân tích các xu thế tiến hóa xã hội vì:",
@@ -147,7 +147,7 @@ const questions = [
             "D. Kết hợp chặt chẽ tri thức triết học và tri thức khoa học chuyên ngành"
         ],
         correct: [2] // C
-    },
+    }},
     {
         id: 12,
         text: "Câu 12: Mối quan hệ giữa triết học Mác-Lênin và cách mạng khoa học công nghệ được thể hiện như thế nào?",
@@ -159,7 +159,7 @@ const questions = [
             "D. Triết học Mác-Lênin là sản phẩm của cách mạng khoa học công nghệ"
         ],
         correct: [2] // C
-    },
+    }},
     {
         id: 13,
         text: "Câu 13: Yếu tố nào là cơ sở để Đảng Cộng sản Việt Nam vận dụng xây dựng công cuộc đổi mới toàn diện xã hội theo định hướng xã hội chủ nghĩa?",
@@ -171,23 +171,23 @@ const questions = [
             "D. Kinh nghiệm cá nhân của lãnh đạo và các mô hình kinh tế phương Tây"
         ],
         correct: [2] // C
-    },
+    }},
     {
         id: 14,
         text: "Câu 14: Kéo thả các nội dung liệt kê dưới đây vào các cột tương ứng:",
         type: "drag_drop",
         targets: [
-            { id: 15, text: "1) Triết học Mác - Lênin là cơ sở lý luận khoa học:" },
-            { id: 16, text: "2) Triết học Mác - Lênin là thế giới quan, phương pháp luận khoa học và cách mạng:" }
+            { id: 1, text: "1) Triết học Mác - Lênin là cơ sở lý luận khoa học:" },
+            { id: 2, text: "2) Triết học Mác - Lênin là thế giới quan, phương pháp luận khoa học và cách mạng:" }
         ],
         items: [
             { id: 'item1', text: "Của công cuộc xây dựng chủ nghĩa xã hội trên thế giới", correctTarget: 1 },
             { id: 'item2', text: "Sự nghiệp đổi mới theo định hướng xã hội chủ nghĩa ở Việt Nam", correctTarget: 1 },
             { id: 'item3', text: "Cho con người trong nhận thức và thực tiễn", correctTarget: 2 }
         ]
-    },
+    }},
     {
-        id: 17,
+        id: 15,
         text: "Câu 15: Triết học ra đời trong điều kiện nào? (Chọn 2 đáp án)",
         type: "multiple",
         options: [
@@ -197,9 +197,9 @@ const questions = [
             "D. Xuất hiện tầng lớp lao động trí óc"
         ],
         correct: [0, 1]
-    },
+    }},
     {
-        id: 18,
+        id: 16,
         text: "Câu 16: Chức năng của triết học Mác - Lênin là gì? (Chọn 2 đáp án)",
         type: "multiple",
         options: [
@@ -209,9 +209,9 @@ const questions = [
             "D. Chức năng phương pháp luận"
         ],
         correct: [1, 3] // B & D
-    },
+    }},
     {
-        id: 19,
+        id: 17,
         text: "Câu 17: Trong sự phát triển của xã hội hiện đại, triết học Mác - Lênin đóng vai trò gì?",
         type: "single",
         options: [
@@ -221,9 +221,9 @@ const questions = [
             "D. Hợp thức hóa mọi hình thức hợp tác quốc tế"
         ],
         correct: [2] // C
-    },
+    }},
     {
-        id: 20,
+        id: 18,
         text: "Câu 18: Chỉ ra khẳng định nào Đúng, khẳng định nào Sai:",
         type: "group",
         subQuestions: [
@@ -248,9 +248,9 @@ const questions = [
                 correct: 0 // Đúng
             }
         ]
-    },
+    }},
     {
-        id: 21,
+        id: 19,
         text: "Câu 19: Điều kiện kinh tế - xã hội cho sự ra đời của triết học Mác - Lênin? (Chọn 2 đáp án)",
         type: "multiple",
         options: [
@@ -260,9 +260,9 @@ const questions = [
             "D. Giai cấp tư sản ra đời và trở thành lực lượng chính trị độc lập"
         ],
         correct: [0, 1] // A & B
-    },
+    }},
     {
-        id: 22,
+        id: 20,
         text: "Câu 20: Vai trò của triết học Mác - Lênin trong cuộc cách mạng khoa học và công nghệ hiện đại?",
         type: "single",
         options: [
@@ -272,22 +272,22 @@ const questions = [
             "D. Là công cụ đấu tranh giai cấp"
         ],
         correct: [0] // A
-    },
+    }},
     {
-        id: 23,
+        id: 21,
         text: "Câu 21: Kéo thả các nội dung liệt kê dưới đây vào cột tương ứng:",
         type: "drag_drop",
         targets: [
-            { id: 24, text: "1) Chức năng phương pháp luận là:" },
-            { id: 25, text: "2) Chức năng thế giới quan là:" }
+            { id: 1, text: "1) Chức năng phương pháp luận là:" },
+            { id: 2, text: "2) Chức năng thế giới quan là:" }
         ],
         items: [
             { id: 'item4', text: "Giúp con người phát triển tư duy khoa học", correctTarget: 1 },
             { id: 'item5', text: "Định hướng cho con người nhận thức", correctTarget: 2 }
         ]
-    },
+    }},
     {
-        id: 26,
+        id: 22,
         text: "Câu 22: Điều kiện kinh tế - xã hội cho sự ra đời của triết học Mác - Lênin? (Chọn 2 đáp án)",
         type: "multiple",
         options: [
@@ -297,9 +297,9 @@ const questions = [
             "D. Sự củng cố và phát triển của phương thức sản xuất tư bản chủ nghĩa"
         ],
         correct: [1, 3] // B & D
-    },
+    }},
     {
-        id: 27,
+        id: 23,
         text: "Câu 23: Khẳng định nào sau đây là sai? (Chọn 2 đáp án trả lời sai)",
         type: "multiple",
         options: [
@@ -309,9 +309,9 @@ const questions = [
             "D. Theo quan điểm của triết học Mác: triết học thay thế được các khoa học cụ thể"
         ],
         correct: [0, 3] // A & D
-    },
+    }},
     {
-        id: 28,
+        id: 24,
         text: "Câu 24: Đối tượng nghiên cứu của triết học là gì?",
         type: "single",
         options: [
@@ -321,9 +321,9 @@ const questions = [
             "D. Những quy luật vận động của tự nhiên, xã hội"
         ],
         correct: [2] // C
-    },
+    }},
     {
-        id: 29,
+        id: 25,
         text: "Câu 25: Những điều kiện lịch sử nào sau đây là cơ sở cho sự ra đời của triết học Mác? (Chọn 2 đáp án)",
         type: "multiple",
         options: [
@@ -333,9 +333,9 @@ const questions = [
             "D. Sự xuất hiện của giai cấp vô sản trên vũ đài lịch sử"
         ],
         correct: [2, 3] // C & D
-    },
+    }},
     {
-        id: 30,
+        id: 26,
         text: "Câu 26: Triết học Mác - Lênin là gì? (Chọn 2 đáp án)",
         type: "multiple",
         options: [
@@ -345,9 +345,9 @@ const questions = [
             "D. Là khoa học nghiên cứu những quy luật chung nhất của tự nhiên"
         ],
         correct: [1, 2] // B & C
-    },
+    }},
     {
-        id: 31,
+        id: 27,
         text: "Câu 27: Thực chất và ý nghĩa cuộc cách mạng trong triết học do C.Mác và Ph.Ăngghen thực hiện là khắc phục: (Chọn 2 đáp án)",
         type: "multiple",
         options: [
@@ -357,9 +357,9 @@ const questions = [
             "D. Tính chất duy tâm, thần bí của chủ nghĩa duy vật cũ"
         ],
         correct: [0, 3] // A & D
-    },
+    }},
     {
-        id: 32,
+        id: 28,
         text: "Câu 28: Vai trò của triết học Mác-Lênin trong bối cảnh toàn cầu hóa là gì?",
         type: "single",
         options: [
@@ -369,9 +369,9 @@ const questions = [
             "D. Là cơ sở phân tích xu hướng vận động, phát triển của toàn cầu hóa và xã hội hiện đại"
         ],
         correct: [3] // D
-    },
+    }},
     {
-        id: 33,
+        id: 29,
         text: "Câu 29: Một trong những hạn chế trong việc vận dụng triết học Mác - Lênin trước đây là:",
         type: "single",
         options: [
@@ -381,9 +381,9 @@ const questions = [
             "D. Kết hợp lý luận với thực tiễn"
         ],
         correct: [1] // B
-    },
+    }},
     {
-        id: 34,
+        id: 30,
         text: "Câu 30: Công cuộc đổi mới toàn diện xã hội theo định hướng xã hội chủ nghĩa ở Việt Nam là: (Câu trả lời lựa chọn 2 đáp án đúng)",
         type: "multiple",
         options: [
@@ -393,9 +393,9 @@ const questions = [
             "D. Được mở đường bằng đội mới tư duy lý luận"
         ],
         correct: [0, 3] // A & D
-    },
+    }},
     {
-        id: 35,
+        id: 31,
         text: "Câu 31: Hình ảnh \"Ông Bụt\" trong các câu truyện cổ tích Việt Nam thể hiện thế giới quan nào trong triết học?",
         type: "single",
         options: [
@@ -405,9 +405,9 @@ const questions = [
             "D. Thế giới quan cổ đại"
         ],
         correct: [2] // C
-    },
+    }},
     {
-        id: 36,
+        id: 32,
         text: "Câu 32: Triết học Mác-Lênin là cơ sở lý luận khoa học của sự nghiệp đổi mới theo định hướng xã hội chủ nghĩa ở Việt Nam vì: (Chọn 2 đáp án)",
         type: "multiple",
         options: [
@@ -417,7 +417,7 @@ const questions = [
             "D. Được mở đường bằng đội mới tư duy lý luận"
         ],
         correct: [1, 2] // B & C
-    }
+    }}
 ,
 
     {
@@ -431,7 +431,7 @@ const questions = [
             'Tồn tại trong ý thức của con người'
         ],
         correct: [0, 2]
-    },
+    }},
     {
         id: 34,
         type: 'single',
@@ -443,7 +443,7 @@ const questions = [
             'Tồn tại chủ quan'
         ],
         correct: [2]
-    },
+    }},
     {
         id: 35,
         type: 'multiple',
@@ -455,7 +455,7 @@ const questions = [
             'Chỉ có giá trị trong phạm vi triết học mà không có ý nghĩa đối với khoa học thực nghiệm'
         ],
         correct: [0, 2]
-    },
+    }},
     {
         id: 36,
         type: 'single',
@@ -467,7 +467,7 @@ const questions = [
             'Là vận động của các hình thái kinh tế - xã hội'
         ],
         correct: [3]
-    },
+    }},
     {
         id: 37,
         type: 'single',
@@ -479,7 +479,7 @@ const questions = [
             'Bút ký triết học'
         ],
         correct: [0]
-    },
+    }},
     {
         id: 38,
         type: 'single',
@@ -491,7 +491,7 @@ const questions = [
             'Tiêu tan giới hạn hiểu biết trước đây về vật chất'
         ],
         correct: [3]
-    },
+    }},
     {
         id: 39,
         type: 'single',
@@ -503,7 +503,7 @@ const questions = [
             'Đồng nhất vật chất với ý thức'
         ],
         correct: [1]
-    },
+    }},
     {
         id: 40,
         type: 'single',
@@ -515,7 +515,7 @@ const questions = [
             'Phân tách rõ ràng giữa tự nhiên và xã hội trong nghiên cứu triết học'
         ],
         correct: [2]
-    },
+    }},
     {
         id: 41,
         type: 'single',
@@ -527,7 +527,7 @@ const questions = [
             'Chủ nghĩa duy vật đều cho ý thức là sự phản ánh hiện thực khách quan vào óc con người'
         ],
         correct: [1]
-    },
+    }},
     {
         id: 42,
         type: 'single',
@@ -539,7 +539,7 @@ const questions = [
             'Ý thức, tinh thần vốn của con người đã bị trừu tượng hóa, tách khỏi con người hiện thực thành một lực lượng thần bí'
         ],
         correct: [2]
-    },
+    }},
     {
         id: 43,
         type: 'single',
@@ -551,7 +551,7 @@ const questions = [
             'Nguồn gốc tự nhiên và nguồn gốc nhận thức'
         ],
         correct: [0]
-    },
+    }},
     {
         id: 44,
         type: 'single',
@@ -563,7 +563,7 @@ const questions = [
             'Chủ nghĩa duy tâm khách quan'
         ],
         correct: [0]
-    },
+    }},
     {
         id: 45,
         type: 'multiple',
@@ -575,7 +575,7 @@ const questions = [
             'Chủ nghĩa duy vật đều cho ý thức có nguồn gốc xã hội và nguồn gốc kinh tế'
         ],
         correct: [1, 3]
-    },
+    }},
     {
         id: 46,
         type: 'multiple',
@@ -587,7 +587,7 @@ const questions = [
             'Là sự phản ánh hiện thực khách quan vào bộ óc con người nhưng có sự sáng tạo, cải biến của chủ thể nhận thức.'
         ],
         correct: [1, 3]
-    },
+    }},
     {
         id: 47,
         type: 'multiple',
@@ -599,7 +599,7 @@ const questions = [
             'Cuộc khủng hoảng trong vật lý học là minh chứng cho sự sụp đổ của chủ nghĩa duy vật nói chung'
         ],
         correct: [1, 2]
-    },
+    }},
     {
         id: 48,
         type: 'multiple',
@@ -611,7 +611,7 @@ const questions = [
             'Được củng cố thêm bởi những thành tựu của khoa học tự nhiên và xã hội hiện đại'
         ],
         correct: [0, 2]
-    },
+    }},
     {
         id: 49,
         type: 'multiple',
@@ -623,7 +623,7 @@ const questions = [
             'Kinh tế và văn hóa'
         ],
         correct: [0, 1]
-    },
+    }},
     {
         id: 50,
         type: 'single',
@@ -635,7 +635,7 @@ const questions = [
             'Ý thức là sự phản ánh hiện thực khách quan vào bộ óc con người'
         ],
         correct: [2]
-    },
+    }},
     {
         id: 51,
         type: 'single',
@@ -647,7 +647,7 @@ const questions = [
             'Ý thức là hình ảnh phản chiếu về thế giới khách quan'
         ],
         correct: [1]
-    },
+    }},
     {
         id: 52,
         type: 'multiple',
@@ -659,7 +659,7 @@ const questions = [
             'Dấu hiệu của một cuộc cách mạng trong khoa học tự nhiên'
         ],
         correct: [2, 3]
-    },
+    }},
     {
         id: 53,
         type: 'single',
@@ -671,7 +671,7 @@ const questions = [
             'Của A-ri-xtốt, thuộc lập trường chủ nghĩa duy vật'
         ],
         correct: [1]
-    },
+    }},
     {
         id: 54,
         type: 'multiple',
@@ -683,7 +683,7 @@ const questions = [
             'Là hình ảnh phản chiếu trực tiếp thế giới khách quan lên ý thức con người như một tấm gương.'
         ],
         correct: [1, 2]
-    },
+    }},
     {
         id: 55,
         type: 'single',
@@ -695,7 +695,7 @@ const questions = [
             'Là ý thức và hoạt động có mục đích của con người'
         ],
         correct: [1]
-    },
+    }},
     {
         id: 56,
         type: 'multiple',
@@ -707,14 +707,14 @@ const questions = [
             'Nguồn gốc tự nhiên là điều kiện cần, còn nguồn gốc xã hội là điều kiện đủ để hình thành ý thức'
         ],
         correct: [2, 3]
-    },
+    }},
     {
         id: 57,
         type: 'drag_drop',
         text: 'Câu 25: Kéo thả các nội dung đã liệt kê dưới đây vào cột tương ứng:',
         targets: [
-            { id: 58, text: 'Trong nguồn gốc xã hội của ý thức, ngôn ngữ là hệ thống tín hiệu gì?' },
-            { id: 59, text: 'Vật chất là một phạm trù triết học dùng để chỉ:' }
+            { id: 1, text: 'Trong nguồn gốc xã hội của ý thức, ngôn ngữ là hệ thống tín hiệu gì?' },
+            { id: 2, text: 'Vật chất là một phạm trù triết học dùng để chỉ:' }
         ],
         items: [
             { id: 'item1', text: 'Thế giới khách quan', correctTarget: 2, required: false },
@@ -725,16 +725,16 @@ const questions = [
             { id: 'item6', text: 'Tín hiệu vật chất mang một dạng ý thức', correctTarget: 1, required: true },
             { id: 'item7', text: 'Thực tại khách quan', correctTarget: 2, required: true }
         ]
-    },
+    }},
     {
-        id: 60,
+        id: 58,
         type: 'drag_drop',
         text: 'Câu 26: Kéo thả các đáp án khớp với các phát biểu từ 1-4 về trại dưới đây:',
         targets: [
-            { id: 61, text: 'Nhà triết học nào coi lửa là thực thể đầu tiên của thế giới và đó là lập trường triết học nào?' },
-            { id: 62, text: 'Nhà triết học nào coi nước là thực thể đầu tiên của thế giới và đó là lập trường triết học nào?' },
-            { id: 63, text: 'Nhà triết học nào coi nguyên tử là thực thể đầu tiên của thế giới và đó là lập trường triết học nào?' },
-            { id: 64, text: 'Nhà triết học nào coi không khí là thực thể đầu tiên của thế giới và đó là lập trường triết học nào?' }
+            { id: 1, text: 'Nhà triết học nào coi lửa là thực thể đầu tiên của thế giới và đó là lập trường triết học nào?' },
+            { id: 2, text: 'Nhà triết học nào coi nước là thực thể đầu tiên của thế giới và đó là lập trường triết học nào?' },
+            { id: 3, text: 'Nhà triết học nào coi nguyên tử là thực thể đầu tiên của thế giới và đó là lập trường triết học nào?' },
+            { id: 4, text: 'Nhà triết học nào coi không khí là thực thể đầu tiên của thế giới và đó là lập trường triết học nào?' }
         ],
         items: [
             { id: 'item5', text: 'Hê-ra-clit - chủ nghĩa duy vật tự phát', correctTarget: 1 },
@@ -742,14 +742,14 @@ const questions = [
             { id: 'item7', text: 'Đê-mô-crít - chủ nghĩa duy vật tự phát', correctTarget: 3 },
             { id: 'item8', text: 'Ana-ximên - chủ nghĩa duy vật tự phát', correctTarget: 4 }
         ]
-    },
+    }},
     {
-        id: 65,
+        id: 59,
         type: 'drag_drop',
         text: 'Câu 27: Kéo thả nội dung đã liệt kê dưới đây vào cột tương ứng:',
         targets: [
-            { id: 66, text: '1) Theo quan điểm của chủ nghĩa duy vật biện chứng, tính sáng tạo của ý thức thể hiện ở khía cạnh nào sau đây:' },
-            { id: 67, text: '2) Theo quan điểm của chủ nghĩa duy vật biện chứng, ý thức có thể tạo ra:' }
+            { id: 1, text: '1) Theo quan điểm của chủ nghĩa duy vật biện chứng, tính sáng tạo của ý thức thể hiện ở khía cạnh nào sau đây:' },
+            { id: 2, text: '2) Theo quan điểm của chủ nghĩa duy vật biện chứng, ý thức có thể tạo ra:' }
         ],
         items: [
             { id: 'item9', text: 'Là năng lực của một dạng vật chất', correctTarget: 1, required: false },
@@ -758,14 +758,14 @@ const questions = [
             { id: 'item12', text: 'Khả năng tiếp nhận và xử lý thông tin', correctTarget: 2, required: false },
             { id: 'item13', text: 'Trí thức mới, ý vật mới đưa vào kiến thức khách quan đã có', correctTarget: 2, required: true }
         ]
-    },
+    }},
     {
-        id: 68,
+        id: 60,
         type: 'drag_drop',
         text: 'Câu 28: Kéo thả các nội dung đã liệt kê dưới đây vào cột tương ứng:',
         targets: [
-            { id: 69, text: 'Theo quan điểm duy vật biện chứng, nguồn gốc tự nhiên của ý thức:' },
-            { id: 70, text: 'Theo quan điểm duy vật biện chứng, nguồn gốc xã hội của ý thức:' }
+            { id: 1, text: 'Theo quan điểm duy vật biện chứng, nguồn gốc tự nhiên của ý thức:' },
+            { id: 2, text: 'Theo quan điểm duy vật biện chứng, nguồn gốc xã hội của ý thức:' }
         ],
         items: [
             { id: 'item14', text: 'Công cụ lao động', correctTarget: 2, required: false },
@@ -774,9 +774,9 @@ const questions = [
             { id: 'item17', text: 'Thế giới khách quan và bộ óc người', correctTarget: 1, required: true },
             { id: 'item18', text: 'Lao động và ngôn ngữ', correctTarget: 2, required: true }
         ]
-    },
+    }},
     {
-        id: 71,
+        id: 61,
         type: 'group',
         text: 'Câu 29: Chỉ ra các phát biểu nào đúng, phát biểu nào sai:',
         subQuestions: [
@@ -801,7 +801,7 @@ const questions = [
                 correct: 1 // Sai
             }
         ]
-    }
+    }}
 ,
 
     {
@@ -815,7 +815,7 @@ const questions = [
             'Vật chất và ý thức tôn tại song song'
         ],
         correct: [0, 2]
-    },
+    }},
     {
         id: 63,
         type: 'multiple',
@@ -827,7 +827,7 @@ const questions = [
             'Tôn trọng tính khách quan'
         ],
         correct: [2, 3]
-    },
+    }},
     {
         id: 64,
         type: 'single',
@@ -839,7 +839,7 @@ const questions = [
             'Phản ánh có chọn lọc, phân tích, tổng hợp và dự báo'
         ],
         correct: [3]
-    },
+    }},
     {
         id: 65,
         type: 'single',
@@ -851,7 +851,7 @@ const questions = [
             'Xuất phát từ thực tế khách quan'
         ],
         correct: [1]
-    },
+    }},
     {
         id: 66,
         type: 'single',
@@ -863,7 +863,7 @@ const questions = [
             'Làm chậm tiên bộ xã hội'
         ],
         correct: [1]
-    },
+    }},
     {
         id: 67,
         type: 'single',
@@ -875,7 +875,7 @@ const questions = [
             'Tư duy máy móc, thụ động, trì trệ'
         ],
         correct: [3]
-    },
+    }},
     {
         id: 68,
         type: 'single',
@@ -887,7 +887,7 @@ const questions = [
             'Giữa vật chất và ý thức'
         ],
         correct: [2]
-    },
+    }},
     {
         id: 69,
         type: 'single',
@@ -899,7 +899,7 @@ const questions = [
             'Vì ý thức tồn tại độc lập với vật chất'
         ],
         correct: [2]
-    },
+    }},
     {
         id: 70,
         type: 'single',
@@ -911,7 +911,7 @@ const questions = [
             'Ý thức hoàn toàn độc lập với vật chất'
         ],
         correct: [1]
-    },
+    }},
     {
         id: 71,
         type: 'single',
@@ -923,7 +923,7 @@ const questions = [
             'Vì ý thức có tính độc lập tương đối, có đời sống riêng'
         ],
         correct: [3]
-    },
+    }},
     {
         id: 72,
         type: 'single',
@@ -935,7 +935,7 @@ const questions = [
             'Vì con người ngày càng thông minh hơn'
         ],
         correct: [0]
-    },
+    }},
     {
         id: 73,
         type: 'multiple',
@@ -947,7 +947,7 @@ const questions = [
             'Khi phản ánh đúng hiện thực, ý thức có thể dự báo, tiên đoán một cách chính xác cho hiện thực'
         ],
         correct: [2, 3]
-    },
+    }},
     {
         id: 74,
         type: 'multiple',
@@ -959,7 +959,7 @@ const questions = [
             'Ý thức quyết định vật chất'
         ],
         correct: [1, 2]
-    },
+    }},
     {
         id: 75,
         type: 'multiple',
@@ -971,7 +971,7 @@ const questions = [
             'Xuất phát từ thực tế khách quan'
         ],
         correct: [2, 3]
-    },
+    }},
     {
         id: 76,
         type: 'multiple',
@@ -983,22 +983,22 @@ const questions = [
             'Ý thức có tính độc lập tương đối, tác động trở lại vật chất'
         ],
         correct: [2, 3]
-    },
+    }},
     {
         id: 77,
         type: 'drag_drop',
         text: 'Câu 16: Kéo thả các nội dung dưới đây vào ở tương ứng:',
         targets: [
-            { id: 78, text: 'Dân gian có câu: "Có thực mới vực được đạo", theo quan điểm duy vật biện chứng, đó là nội dung:' },
-            { id: 79, text: 'Dân gian có câu: "Ngọc kia chuốt mãi cũng tròn/Sắt kia mài mãi cũng còn nên kim", theo quan điểm duy vật biện chứng, đó là nội dung:' }
+            { id: 1, text: 'Dân gian có câu: "Có thực mới vực được đạo", theo quan điểm duy vật biện chứng, đó là nội dung:' },
+            { id: 2, text: 'Dân gian có câu: "Ngọc kia chuốt mãi cũng tròn/Sắt kia mài mãi cũng còn nên kim", theo quan điểm duy vật biện chứng, đó là nội dung:' }
         ],
         items: [
             { id: 'item1', text: 'Vai trò của vật chất với ý thức', correctTarget: 1 },
             { id: 'item2', text: 'Ý thức có tính độc lập tương đối, tác động trở lại vật chất', correctTarget: 2 }
         ]
-    },
+    }},
     {
-        id: 80,
+        id: 78,
         type: 'group',
         text: 'Câu 17: Chỉ ra các phát biểu nào đúng, phát biểu nào sai:',
         subQuestions: [
@@ -1023,22 +1023,22 @@ const questions = [
                 correct: 1 // Sai
             }
         ]
-    },
+    }},
     {
-        id: 81,
+        id: 79,
         type: 'drag_drop',
         text: 'Câu 18: Kéo thả các nội dung liệt kê dưới đây vào các cột tương ứng:',
         targets: [
-            { id: 82, text: 'Theo quan điểm của chủ nghĩa duy vật biện chứng, mối quan hệ giữa vật chất và ý thức là:' },
-            { id: 83, text: 'Theo quan điểm của chủ nghĩa duy vật biện chứng, ý thức có tính độc lập tương đối và tác động trở lại vật chất là:' }
+            { id: 1, text: 'Theo quan điểm của chủ nghĩa duy vật biện chứng, mối quan hệ giữa vật chất và ý thức là:' },
+            { id: 2, text: 'Theo quan điểm của chủ nghĩa duy vật biện chứng, ý thức có tính độc lập tương đối và tác động trở lại vật chất là:' }
         ],
         items: [
             { id: 'item3', text: 'Vật chất quyết định ý thức, còn ý thức tác động tích cực trở lại vật chất', correctTarget: 1 },
             { id: 'item4', text: 'Ý thức là sự phản ánh thế giới vật chất vào trong đầu óc con người', correctTarget: 2 }
         ]
-    },
+    }},
     {
-        id: 84,
+        id: 80,
         type: 'single',
         text: 'Câu 19: Theo triết học Mác - Lênin, trong nhận thức và hoạt động thực tiễn, mọi chủ trương, đường lối, kế hoạch, mục tiêu đều phải xuất phát từ:',
         options: [
@@ -1048,9 +1048,9 @@ const questions = [
             'Thực tế khách quan'
         ],
         correct: [3]
-    },
+    }},
     {
-        id: 85,
+        id: 81,
         type: 'multiple',
         text: 'Câu 20: Theo quan điểm của chủ nghĩa duy vật biện chứng, tính độc lập tương đối của ý thức thể hiện rõ nhất ở điểm nào?\n\n(Chọn 2 đáp án đúng)',
         options: [
@@ -1060,9 +1060,9 @@ const questions = [
             'Được sinh ra trực tiếp từ vật chất'
         ],
         correct: [1, 2]
-    },
+    }},
     {
-        id: 86,
+        id: 82,
         type: 'multiple',
         text: 'Câu 21: Theo quan điểm của chủ nghĩa duy vật biện chứng, vai trò của bộ óc người trong mối quan hệ giữa vật chất và ý thức là:\n\n(Chọn 2 đáp án đúng)',
         options: [
@@ -1072,9 +1072,9 @@ const questions = [
             'Là ý thức tỉnh thân sinh ra thế giới vật chât'
         ],
         correct: [0, 2]
-    },
+    }},
     {
-        id: 87,
+        id: 83,
         type: 'single',
         text: 'Câu 22: Theo quan điểm duy vật biện chứng, ý thức tác động trở lại vật chất có nghĩa là:',
         options: [
@@ -1084,9 +1084,9 @@ const questions = [
             'Ý thức tạo ra vật chất'
         ],
         correct: [2]
-    },
+    }},
     {
-        id: 88,
+        id: 84,
         type: 'single',
         text: 'Câu 23: Khía cạnh nào dưới đây không thuộc vai trò quyết định của vật chất đối với ý thức?',
         options: [
@@ -1096,9 +1096,9 @@ const questions = [
             'Vật chất quyết định sự vận động, phát triển của ý thức'
         ],
         correct: [1]
-    },
+    }},
     {
-        id: 89,
+        id: 85,
         type: 'single',
         text: 'Câu 24: Theo quan điểm của chủ nghĩa duy vật biện chứng, vật chất quyết định nguồn gốc của ý thức vì:',
         options: [
@@ -1108,9 +1108,9 @@ const questions = [
             'Sự vận động của thế giới vật chất là yếu tố quyết định sự ra đời của ý thức'
         ],
         correct: [3]
-    },
+    }},
     {
-        id: 90,
+        id: 86,
         type: 'single',
         text: 'Câu 25: Theo quan điểm duy vật biện chứng, việc con người tạo ra "thiên nhiên thứ hai" là nhờ:',
         options: [
@@ -1120,9 +1120,9 @@ const questions = [
             'Các hiện tượng siêu nhiên'
         ],
         correct: [1]
-    },
+    }},
     {
-        id: 91,
+        id: 87,
         type: 'multiple',
         text: 'Câu 26: Nguyên tắc phương pháp luận "tôn trọng tính khách quan kết hợp phát huy tính năng động chủ quan" có ý nghĩa gì?\n\n(Chọn 2 đáp án đúng)',
         options: [
@@ -1132,16 +1132,16 @@ const questions = [
             'Phát huy tính năng động chủ quan'
         ],
         correct: [2, 3]
-    },
+    }},
     {
-        id: 92,
+        id: 88,
         type: 'drag_drop',
         text: 'Câu 27: Kéo thả các nội dung khớp với các nội dung từ 1-4 về trái dưới đây:',
         targets: [
-            { id: 93, text: 'Quan điểm nào coi ý thức, tinh thần vốn của con người đã bị trừu tượng hóa, tách khỏi con người hiện thực thành một lực lượng thần bí?' },
-            { id: 94, text: 'Quan điểm nào tuyệt đối hoá yếu tố vật chất, chỉ nhấn mạnh một chiều vai trò của vật chất sinh ra ý thức?' },
-            { id: 95, text: 'Quan điểm nào phủ nhận tính khách quan, cường điệu vai trò của nhân tổ chủ quan, duy ý chí?' },
-            { id: 96, text: 'Quan điểm nào cho rằng ý thức có tính độc lập tương đối và tác động trở lại vật chất?' }
+            { id: 1, text: 'Quan điểm nào coi ý thức, tinh thần vốn của con người đã bị trừu tượng hóa, tách khỏi con người hiện thực thành một lực lượng thần bí?' },
+            { id: 2, text: 'Quan điểm nào tuyệt đối hoá yếu tố vật chất, chỉ nhấn mạnh một chiều vai trò của vật chất sinh ra ý thức?' },
+            { id: 3, text: 'Quan điểm nào phủ nhận tính khách quan, cường điệu vai trò của nhân tổ chủ quan, duy ý chí?' },
+            { id: 4, text: 'Quan điểm nào cho rằng ý thức có tính độc lập tương đối và tác động trở lại vật chất?' }
         ],
         items: [
             { id: 'item5', text: 'Chủ nghĩa duy tâm khách quan', correctTarget: 1 },
@@ -1149,9 +1149,9 @@ const questions = [
             { id: 'item7', text: 'Chủ nghĩa duy tâm chủ quan', correctTarget: 3 },
             { id: 'item8', text: 'Chủ nghĩa duy vật biện chứng', correctTarget: 4 }
         ]
-    },
+    }},
     {
-        id: 97,
+        id: 89,
         type: 'single',
         text: 'Câu 28: Để tránh rơi vào chủ nghĩa duy tâm, cần làm gì?',
         options: [
@@ -1161,9 +1161,9 @@ const questions = [
             'Tập trung vào suy nghĩ cá nhân'
         ],
         correct: [0]
-    },
+    }},
     {
-        id: 98,
+        id: 90,
         type: 'single',
         text: 'Câu 29: Khẳng định "vật chất sinh ra, cho nên lẽ tất nhiên, ý thức - một thuộc tính của bộ phận con người - cũng do giới tự nhiên, vật chất sinh ra" thể hiện vai trò quyết định của vật chất ở khía cạnh nào?',
         options: [
@@ -1173,9 +1173,9 @@ const questions = [
             'Vật chất quyết định nội dung của ý thức'
         ],
         correct: [0]
-    },
+    }},
     {
-        id: 99,
+        id: 91,
         type: 'single',
         text: 'Câu 30: Khẳng định "Vật chất thay đổi thì sớm hay muộn, ý thức cũng phải thay đổi theo" là nội dung:',
         options: [
@@ -1185,6 +1185,6 @@ const questions = [
             'Vật chất quyết định nguồn gốc của ý thức'
         ],
         correct: [1]
-    }
+    }}
 
 ];

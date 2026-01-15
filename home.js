@@ -22,6 +22,13 @@ const quizzes = [
         file: 'quiz3.html'
     },
     {
+        id: 4,
+        title: 'Chủ đề 4: Hai nguyên lý, sáu cặp phạm trù của phép biện chứng duy vật',
+        description: 'Tìm hiểu về hai nguyên lý cơ bản (nguyên lý liên hệ phổ biến và nguyên lý phát triển) cùng sáu cặp phạm trù của phép biện chứng duy vật.',
+        questionCount: 30,
+        file: 'quiz4.html'
+    },
+    {
         title: 'Bài kiểm tra kỹ năng 1: Tổng hợp chủ đề 1, 2, 3',
         description: 'Bài kiểm tra tổng hợp toàn bộ kiến thức từ 3 chủ đề đầu tiên, giúp củng cố và đánh giá mức độ nắm vững kiến thức.',
         questionCount: 91,
