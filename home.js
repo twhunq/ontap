@@ -29,6 +29,13 @@ const quizzes = [
         file: 'quiz4.html'
     },
     {
+        id: 5,
+        title: 'Chủ đề 5: Các quy luật cơ bản của phép biện chứng duy vật',
+        description: 'Tìm hiểu về ba quy luật cơ bản: quy luật chuyển hóa từ lượng đến chất, quy luật thống nhất và đấu tranh của các mặt đối lập, quy luật phủ định của phủ định.',
+        questionCount: 30,
+        file: 'quiz5.html'
+    },
+    {
         title: 'Bài kiểm tra kỹ năng 1: Tổng hợp chủ đề 1, 2, 3',
         description: 'Bài kiểm tra tổng hợp toàn bộ kiến thức từ 3 chủ đề đầu tiên, giúp củng cố và đánh giá mức độ nắm vững kiến thức.',
         questionCount: 91,
