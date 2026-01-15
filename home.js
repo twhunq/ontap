@@ -36,6 +36,13 @@ const quizzes = [
         file: 'quiz5.html'
     },
     {
+        id: 6,
+        title: 'Chủ đề 6: Lý luận nhận thức của chủ nghĩa duy vật biện chứng',
+        description: 'Tìm hiểu về quá trình nhận thức, vai trò của thực tiễn, mối quan hệ giữa nhận thức cảm tính và lý tính trong quá trình nhận thức chân lý.',
+        questionCount: 30,
+        file: 'quiz6.html'
+    },
+    {
         title: 'Bài kiểm tra kỹ năng 1: Tổng hợp chủ đề 1, 2, 3',
         description: 'Bài kiểm tra tổng hợp toàn bộ kiến thức từ 3 chủ đề đầu tiên, giúp củng cố và đánh giá mức độ nắm vững kiến thức.',
         questionCount: 91,
