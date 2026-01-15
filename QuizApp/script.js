@@ -799,6 +799,10 @@ function renderStandardQuestion(question) {
 
         const marker = document.createElement('div');
         marker.className = 'option-marker';
+        // Add checkbox class for multiple choice questions
+        if (question.type === 'multiple') {
+            marker.classList.add('checkbox');
+        }
         marker.innerText = String.fromCharCode(65 + idx);
 
         const text = document.createElement('span');

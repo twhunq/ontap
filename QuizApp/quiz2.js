@@ -1,423 +1,3 @@
-const questions = [
-    {
-        id: 1,
-        text: "Câu 1: Triết học ra đời sớm nhất ở đâu?",
-        type: "single",
-        options: [
-            "A. Ai Cập, Hy Lạp, Ấn Độ",
-            "B. Ấn Độ, Châu Phi, Nga",
-            "C. Ấn Độ, Trung Quốc, Hy Lạp",
-            "D. Ai Cập, Ấn Độ, Trung Quốc"
-        ],
-        correct: [2] // C is index 2
-    },
-    {
-        id: 2,
-        text: "Câu 2: Triết học ra đời từ đâu?",
-        type: "single",
-        options: [
-            "A. Từ sự vận động của ý muốn chủ quan của con người",
-            "B. Từ sự sáng tạo của nhà tư tưởng",
-            "C. Từ sự suy tư của con người về bản thân mình",
-            "D. Từ thực tiễn, do nhu cầu của thực tiễn"
-        ],
-        correct: [3] // D
-    },
-    {
-        id: 3,
-        text: "Câu 3: Chỉ ra những phát biểu nào Đúng, phát biểu nào Sai:",
-        type: "group",
-        subQuestions: [
-            {
-                text: "1) Khẳng định triết học Mác là sự kết hợp phép biện chứng của Hêghen và chủ nghĩa duy vật của Phoi-ơ-bắc là:",
-                options: ["Đúng", "Sai"],
-                correct: 1 // Sai
-            },
-            {
-                text: "2) Khẳng định triết học Mác có sự thống nhất giữa phương pháp biện chứng và thế giới quan duy vật là:",
-                options: ["Đúng", "Sai"],
-                correct: 0 // Đúng
-            },
-            {
-                text: "3) Khẳng định triết học Mác khắc phục tính chất trực quan, siêu hình của chủ nghĩa duy vật cũ và khắc phục tính chất duy tâm, thần bí của phép biện chứng duy tâm là:",
-                options: ["Đúng", "Sai"],
-                correct: 0 // Đúng
-            },
-            {
-                text: "4) Khẳng định C.Mác và Ph. Ăngghen đã vận dụng và mở rộng quan điểm duy vật biện chứng vào nghiên cứu lịch sử xã hội là:",
-                options: ["Sai", "Đúng"],
-                correct: 1 // Đúng
-            }
-        ]
-    },
-    {
-        id: 4,
-        text: "Câu 4: Khẳng định nào sau đây về triết học Mác - Lênin là sai?",
-        type: "single",
-        options: [
-            "A. Triết học Mác - Lênin có sự thống nhất giữa phương pháp biện chứng và thế giới quan duy vật",
-            "B. Triết học Mác - Lênin kế thừa và cải tạo Phép biện chứng của Hêghen trên cơ sở duy vật",
-            "C. Triết học Mác - Lênin là sự kết hợp phép biện chứng của Hêghen và chủ nghĩa duy vật của Phoi-ơ-bắc",
-            "D. Triết học Mác - Lênin là chủ nghĩa duy vật biện chứng"
-        ],
-        correct: [2] // C
-    },
-    {
-        id: 5,
-        text: "Câu 5: Các hình thức của chủ nghĩa duy tâm là:",
-        type: "single",
-        options: [
-            "A. Chủ nghĩa duy tâm chất phác và chủ nghĩa duy tâm siêu hình",
-            "B. Chủ nghĩa duy tâm biện chứng và chủ nghĩa duy tâm khách quan",
-            "C. Chủ nghĩa duy tâm siêu hình và chủ nghĩa duy tâm biện chứng",
-            "D. Chủ nghĩa duy tâm khách quan và chủ nghĩa duy tâm chủ quan"
-        ],
-        correct: [3] // D
-    },
-    {
-        id: 6,
-        text: "Câu 6: Những phát minh của khoa học tự nhiên nửa đầu thế kỷ XIX đã cung cấp cơ sở tri thức khoa học cho sự phát triển của cái gì?",
-        type: "single",
-        options: [
-            "A. Phát triển tính thần bí của phép biện chứng duy vật",
-            "B. Phát triển phương pháp tư duy siêu hình",
-            "C. Phát triển tư duy biện chứng thoát khỏi tính tự phát thời kỳ cổ đại và thoát khỏi cái vỏ thần bí của phép biện chứng duy tâm",
-            "D. Phát triển phép biện chứng tự phát"
-        ],
-        correct: [2] // C
-    },
-    {
-        id: 7,
-        text: "Câu 7: Biểu hiện nào sau đây phản ánh đúng bản chất của cuộc cách mạng khoa học và công nghệ hiện đại?",
-        type: "single",
-        options: [
-            "A. Phát triển mạnh mẽ của ngành nông nghiệp, công nghiệp",
-            "B. Cơ sở lý luận cho các phát minh khoa học",
-            "C. Cải biến về chất các lực lượng sản xuất trên cơ sở tri thức khoa học",
-            "D. Tăng trưởng dân số nhanh chóng"
-        ],
-        correct: [2] // C
-    },
-    {
-        id: 8,
-        text: "Câu 8: Trong sự phát triển của xã hội hiện đại, triết học Mác - Lênin đóng vai trò gì?",
-        type: "single",
-        options: [
-            "A. Phân tích xu hướng phát triển của xã hội hiện đại dưới góc nhìn khoa học và cách mạng",
-            "B. Hợp thức hóa mọi hình thức hợp tác quốc tế",
-            "C. Không thúc đẩy hợp tác giữa các quốc gia",
-            "D. Bảo vệ lợi ích của chủ nghĩa tư bản"
-        ],
-        correct: [0] // A
-    },
-    {
-        id: 9,
-        text: "Câu 9: Triết học Mác - Lênin nói chung có giá trị định hướng quan trọng cho con người trong nhận thức và hoạt động thực tiễn của mình vì:",
-        type: "single",
-        options: [
-            "A. Giúp con người thấy trước được phương hướng vận động chung của đối tượng, tránh được những lầm lạc hay mò mẫm",
-            "B. Tri thức thực tiễn là yếu tố duy nhất quyết định thành công",
-            "C. Kết hợp chặt chẽ tri thức triết học và tri thức khoa học chuyên ngành",
-            "D. Triết học Mác - Lênin luôn đúng trong nhận thức và hoạt động thực tiễn"
-        ],
-        correct: [0] // A
-    },
-    {
-        id: 10,
-        text: "Câu 10: Việc vận dụng sai lệch triết học Mác - Lênin dẫn đến hậu quả nào? (Chọn 2 đáp án)",
-        type: "multiple",
-        options: [
-            "A. Một trong những nguyên nhân của sự khủng hoảng của chủ nghĩa xã hội thế giới",
-            "B. Làm cho tư tưởng trở nên giáo điều, xơ cứng",
-            "C. Tăng cường mọi hình thức hợp tác quốc tế",
-            "D. Phát triển nhanh chóng nền kinh tế"
-        ],
-        correct: [0, 1] // A & B
-    },
-    {
-        id: 11,
-        text: "Câu 11: Triết học Mác - Lênin có vai trò quan trọng trong việc phân tích các xu thế tiến hóa xã hội vì:",
-        type: "single",
-        options: [
-            "A. Triết học Mác - Lênin làm nền tảng tư tưởng cho sự nghiệp đổi mới theo định hướng xã hội chủ nghĩa",
-            "B. Vì cái biến về chất các lực lượng sản xuất trên cơ sở tri thức khoa học",
-            "C. Vì triết học Mác - Lênin phân ánh đúng bản chất của các hiện tượng xã hội và quy luật vận động của chúng",
-            "D. Kết hợp chặt chẽ tri thức triết học và tri thức khoa học chuyên ngành"
-        ],
-        correct: [2] // C
-    },
-    {
-        id: 12,
-        text: "Câu 12: Mối quan hệ giữa triết học Mác-Lênin và cách mạng khoa học công nghệ được thể hiện như thế nào?",
-        type: "single",
-        options: [
-            "A. Cách mạng khoa học công nghệ làm triết học Mác-Lênin trở nên lạc hậu",
-            "B. Triết học Mác-Lênin là cơ sở lý luận truyền bá tri thức khoa học",
-            "C. Triết học Mác-Lênin là cơ sở lý luận - phương pháp luận cho các phát minh khoa học",
-            "D. Triết học Mác-Lênin là sản phẩm của cách mạng khoa học công nghệ"
-        ],
-        correct: [2] // C
-    },
-    {
-        id: 13,
-        text: "Câu 13: Yếu tố nào là cơ sở để Đảng Cộng sản Việt Nam vận dụng xây dựng công cuộc đổi mới toàn diện xã hội theo định hướng xã hội chủ nghĩa?",
-        type: "single",
-        options: [
-            "A. Chỉ cần phương pháp luận của triết học Mác - Lênin",
-            "B. Chỉ cần thế giới quan của triết học Mác - Lênin",
-            "C. Cơ sở lý luận khoa học, trong đó hai nhân là phép biện chứng duy vật của triết học Mác - Lênin",
-            "D. Kinh nghiệm cá nhân của lãnh đạo và các mô hình kinh tế phương Tây"
-        ],
-        correct: [2] // C
-    },
-    {
-        id: 14,
-        text: "Câu 14: Kéo thả các nội dung liệt kê dưới đây vào các cột tương ứng:",
-        type: "drag_drop",
-        targets: [
-            { id: 1, text: "1) Triết học Mác - Lênin là cơ sở lý luận khoa học:" },
-            { id: 2, text: "2) Triết học Mác - Lênin là thế giới quan, phương pháp luận khoa học và cách mạng:" }
-        ],
-        items: [
-            { id: 'item1', text: "Của công cuộc xây dựng chủ nghĩa xã hội trên thế giới", correctTarget: 1 },
-            { id: 'item2', text: "Sự nghiệp đổi mới theo định hướng xã hội chủ nghĩa ở Việt Nam", correctTarget: 1 },
-            { id: 'item3', text: "Cho con người trong nhận thức và thực tiễn", correctTarget: 2 }
-        ]
-    },
-    {
-        id: 15,
-        text: "Câu 15: Triết học ra đời trong điều kiện nào? (Chọn 2 đáp án)",
-        type: "multiple",
-        options: [
-            "A. Tư duy của con người đạt trình độ tư duy khái quát cao",
-            "B. Xã hội phân chia thành giai cấp và xuất hiện tầng lớp lao động trí óc",
-            "C. Xã hội phân chia thành giai cấp",
-            "D. Xuất hiện tầng lớp lao động trí óc"
-        ],
-        correct: [0, 1]
-    },
-    {
-        id: 16,
-        text: "Câu 16: Chức năng của triết học Mác - Lênin là gì? (Chọn 2 đáp án)",
-        type: "multiple",
-        options: [
-            "A. Chức năng khoa học của các khoa học",
-            "B. Chức năng thế giới quan",
-            "C. Chức năng làm cầu nối cho các khoa học",
-            "D. Chức năng phương pháp luận"
-        ],
-        correct: [1, 3] // B & D
-    },
-    {
-        id: 17,
-        text: "Câu 17: Trong sự phát triển của xã hội hiện đại, triết học Mác - Lênin đóng vai trò gì?",
-        type: "single",
-        options: [
-            "A. Không thúc đẩy hợp tác giữa các quốc gia",
-            "B. Bảo vệ lợi ích của chủ nghĩa tư bản",
-            "C. Phân tích xu hướng phát triển của xã hội hiện đại dưới góc nhìn khoa học và cách mạng",
-            "D. Hợp thức hóa mọi hình thức hợp tác quốc tế"
-        ],
-        correct: [2] // C
-    },
-    {
-        id: 18,
-        text: "Câu 18: Chỉ ra khẳng định nào Đúng, khẳng định nào Sai:",
-        type: "group",
-        subQuestions: [
-            {
-                text: "1) Khẳng định vai trò của triết học Mác - Lênin làm nền tảng tư tưởng cho sự nghiệp đổi mới theo định hướng xã hội chủ nghĩa là:",
-                options: ["Đúng", "Sai"],
-                correct: 0 // Đúng
-            },
-            {
-                text: "2) Nhận thức và vận dụng triết học Mác - Lênin một cách máy móc, thiếu sáng tạo không phải là nguyên nhân dẫn đến khủng hoảng trong chủ nghĩa xã hội thế giới.",
-                options: ["Đúng", "Sai"],
-                correct: 1 // Sai
-            },
-            {
-                text: "3) Việc nhận thức và vận dụng lý luận Mác - Lênin một cách giáo điều, xơ cứng không ảnh hưởng đến sự phát triển của chủ nghĩa xã hội thế giới.",
-                options: ["Đúng", "Sai"],
-                correct: 1 // Sai
-            },
-            {
-                text: "4) Triết học Mác - Lênin giúp định hướng phát triển xã hội trong điều kiện cuộc cách mạng khoa học và công nghệ hiện đại.",
-                options: ["Đúng", "Sai"],
-                correct: 0 // Đúng
-            }
-        ]
-    },
-    {
-        id: 19,
-        text: "Câu 19: Điều kiện kinh tế - xã hội cho sự ra đời của triết học Mác - Lênin? (Chọn 2 đáp án)",
-        type: "multiple",
-        options: [
-            "A. Thực tiễn cách mạng của giai cấp vô sản là cơ sở chủ yếu nhất cho sự ra đời triết học Mác",
-            "B. Sự củng cố và phát triển của phương thức sản xuất tư bản chủ nghĩa",
-            "C. Thực tiễn cách mạng của giai cấp tư sản",
-            "D. Giai cấp tư sản ra đời và trở thành lực lượng chính trị độc lập"
-        ],
-        correct: [0, 1] // A & B
-    },
-    {
-        id: 20,
-        text: "Câu 20: Vai trò của triết học Mác - Lênin trong cuộc cách mạng khoa học và công nghệ hiện đại?",
-        type: "single",
-        options: [
-            "A. Là cơ sở lý luận - phương pháp luận cho các phát minh khoa học",
-            "B. Đề cao triết học, hạ thấp khoa học",
-            "C. Để cao các khoa học, hạ thấp triết học",
-            "D. Là công cụ đấu tranh giai cấp"
-        ],
-        correct: [0] // A
-    },
-    {
-        id: 21,
-        text: "Câu 21: Kéo thả các nội dung liệt kê dưới đây vào cột tương ứng:",
-        type: "drag_drop",
-        targets: [
-            { id: 1, text: "1) Chức năng phương pháp luận là:" },
-            { id: 2, text: "2) Chức năng thế giới quan là:" }
-        ],
-        items: [
-            { id: 'item4', text: "Giúp con người phát triển tư duy khoa học", correctTarget: 1 },
-            { id: 'item5', text: "Định hướng cho con người nhận thức", correctTarget: 2 }
-        ]
-    },
-    {
-        id: 22,
-        text: "Câu 22: Điều kiện kinh tế - xã hội cho sự ra đời của triết học Mác - Lênin? (Chọn 2 đáp án)",
-        type: "multiple",
-        options: [
-            "A. Thực tiễn cách mạng của giai cấp tư sản",
-            "B. Thực tiễn cách mạng của giai cấp vô sản là cơ sở chủ yếu nhất cho sự ra đời triết học Mác",
-            "C. Giai cấp tư sản ra đời và trở thành lực lượng chính trị độc lập",
-            "D. Sự củng cố và phát triển của phương thức sản xuất tư bản chủ nghĩa"
-        ],
-        correct: [1, 3] // B & D
-    },
-    {
-        id: 23,
-        text: "Câu 23: Khẳng định nào sau đây là sai? (Chọn 2 đáp án trả lời sai)",
-        type: "multiple",
-        options: [
-            "A. Triết học Mác cho triết học là khoa học của mọi khoa học",
-            "B. Triết học Mác có sự thống nhất giữa phương pháp biện chứng và thế giới quan duy vật",
-            "C. Theo quan điểm của triết học Mác: sự phát triển của triết học quan hệ chặt chẽ với sự phát triển của khoa học tự nhiên",
-            "D. Theo quan điểm của triết học Mác: triết học thay thế được các khoa học cụ thể"
-        ],
-        correct: [0, 3] // A & D
-    },
-    {
-        id: 24,
-        text: "Câu 24: Đối tượng nghiên cứu của triết học là gì?",
-        type: "single",
-        options: [
-            "A. Những quy luật vận động, phát triển của tự nhiên, xã hội và tư duy",
-            "B. Những quy luật hình thành của xã hội và tư duy",
-            "C. Những quy luật vận động, phát triển chung nhất của tự nhiên, xã hội và tư duy",
-            "D. Những quy luật vận động của tự nhiên, xã hội"
-        ],
-        correct: [2] // C
-    },
-    {
-        id: 25,
-        text: "Câu 25: Những điều kiện lịch sử nào sau đây là cơ sở cho sự ra đời của triết học Mác? (Chọn 2 đáp án)",
-        type: "multiple",
-        options: [
-            "A. Phong trào giải phóng dân tộc ở các nước thuộc địa",
-            "B. Sự phát triển của chủ nghĩa duy vật siêu hình",
-            "C. Sự củng cố và phát triển của phương thức sản xuất tư bản chủ nghĩa",
-            "D. Sự xuất hiện của giai cấp vô sản trên vũ đài lịch sử"
-        ],
-        correct: [2, 3] // C & D
-    },
-    {
-        id: 26,
-        text: "Câu 26: Triết học Mác - Lênin là gì? (Chọn 2 đáp án)",
-        type: "multiple",
-        options: [
-            "A. Là khoa học nghiên cứu về con người",
-            "B. Là thế giới quan và phương pháp luận khoa học, cách mạng của giai cấp công nhân, nhân dân lao động và các lực lượng xã hội tiến bộ trong nhân loại thời đại ngày nay",
-            "C. Là hệ thống quan điểm duy vật biện chứng về tự nhiên, xã hội và tư duy",
-            "D. Là khoa học nghiên cứu những quy luật chung nhất của tự nhiên"
-        ],
-        correct: [1, 2] // B & C
-    },
-    {
-        id: 27,
-        text: "Câu 27: Thực chất và ý nghĩa cuộc cách mạng trong triết học do C.Mác và Ph.Ăngghen thực hiện là khắc phục: (Chọn 2 đáp án)",
-        type: "multiple",
-        options: [
-            "A. Tính chất trực quan, siêu hình của phép biện chứng duy tâm",
-            "B. Kế thừa tư duy nhân loại",
-            "C. Mở rộng quan điểm duy vật siêu hình",
-            "D. Tính chất duy tâm, thần bí của chủ nghĩa duy vật cũ"
-        ],
-        correct: [0, 3] // A & D
-    },
-    {
-        id: 28,
-        text: "Câu 28: Vai trò của triết học Mác-Lênin trong bối cảnh toàn cầu hóa là gì?",
-        type: "single",
-        options: [
-            "A. Là công cụ bảo vệ nền văn hóa ngoại lai",
-            "B. Là hình thức thúc đẩy toàn cầu hóa",
-            "C. Là công cụ đấu tranh chống lại toàn cầu hóa",
-            "D. Là cơ sở phân tích xu hướng vận động, phát triển của toàn cầu hóa và xã hội hiện đại"
-        ],
-        correct: [3] // D
-    },
-    {
-        id: 29,
-        text: "Câu 29: Một trong những hạn chế trong việc vận dụng triết học Mác - Lênin trước đây là:",
-        type: "single",
-        options: [
-            "A. Luôn bổ sung, phát triển tư duy lý luận theo tình hình mới",
-            "B. Áp dụng một cách máy móc, giáo điều",
-            "C. Vận dụng triết học Mác - Lênin để đánh giá cục diện thế giới, các mối quan hệ quốc tế",
-            "D. Kết hợp lý luận với thực tiễn"
-        ],
-        correct: [1] // B
-    },
-    {
-        id: 30,
-        text: "Câu 30: Công cuộc đổi mới toàn diện xã hội theo định hướng xã hội chủ nghĩa ở Việt Nam là: (Câu trả lời lựa chọn 2 đáp án đúng)",
-        type: "multiple",
-        options: [
-            "A. Thế giới quan Triết học Mác – Lênin đã giúp Đảng Cộng Sản Việt Nam nhìn nhận con đường đi lên chủ nghĩa xã hội",
-            "B. Triết học Mác – Lênin là cơ sở thế giới quan để phân tích xu hướng vận động, phát triển của xã hội hiện đại",
-            "C. Giúp con người khi bắt tay vào nghiên cứu và hoạt động cải biến sự vật",
-            "D. Được mở đường bằng đội mới tư duy lý luận"
-        ],
-        correct: [0, 3] // A & D
-    },
-    {
-        id: 31,
-        text: "Câu 31: Hình ảnh \"Ông Bụt\" trong các câu truyện cổ tích Việt Nam thể hiện thế giới quan nào trong triết học?",
-        type: "single",
-        options: [
-            "A. Thế giới quan duy tâm",
-            "B. Thế giới quan nhân thân",
-            "C. Thế giới quan thần thoại",
-            "D. Thế giới quan cổ đại"
-        ],
-        correct: [2] // C
-    },
-    {
-        id: 32,
-        text: "Câu 32: Triết học Mác-Lênin là cơ sở lý luận khoa học của sự nghiệp đổi mới theo định hướng xã hội chủ nghĩa ở Việt Nam vì: (Chọn 2 đáp án)",
-        type: "multiple",
-        options: [
-            "A. Là học thuyết duy nhất về phát triển xã hội",
-            "B. Triết học Mác – Lênin là cơ sở thế giới quan để phân tích xu hướng vận động, phát triển của xã hội hiện đại",
-            "C. Dựa trên cơ sở lý luận khoa học, trong đó hạt nhân là phép biện chứng duy vật",
-            "D. Được mở đường bằng đội mới tư duy lý luận"
-        ],
-        correct: [1, 2] // B & C
-    }
-];
-
 // App State
 let currentQuestionIndex = 0;
 let userAnswers = {}; // Store answers key: questionId
@@ -698,8 +278,11 @@ function isQuestionCorrect(question) {
     } else if (question.type === 'drag_drop') {
         let allCorrect = true;
         question.items.forEach(item => {
-            const uTarget = userAnswers[question.id] ? userAnswers[question.id][item.id] : null;
-            if (uTarget !== item.correctTarget) allCorrect = false;
+            // Only check required items (if required property exists and is true)
+            if (item.required !== false) {
+                const uTarget = userAnswers[question.id] ? userAnswers[question.id][item.id] : null;
+                if (uTarget !== item.correctTarget) allCorrect = false;
+            }
         });
         return allCorrect;
     }
@@ -897,6 +480,7 @@ function renderGroupQuestion(question) {
 
 // Drag functionality variables
 let draggedItem = null;
+let selectedItem = null; // For click-to-select functionality
 
 function renderDragDropQuestion(question) {
     const container = document.createElement('div');
@@ -912,6 +496,25 @@ function renderDragDropQuestion(question) {
     const sourceContainer = document.createElement('div');
     sourceContainer.className = 'dnd-source';
     sourceContainer.setAttribute('data-target-id', 'source');
+
+    // Click to return selected item to source
+    if (!isReviewMode) {
+        sourceContainer.addEventListener('click', function (e) {
+            if (selectedItem && selectedItem.questionId === question.id) {
+                // Move item back to source
+                sourceContainer.appendChild(selectedItem.element);
+
+                // Update answer
+                if (!userAnswers[question.id]) userAnswers[question.id] = {};
+                userAnswers[question.id][selectedItem.element.id] = null;
+
+                // Deselect
+                selectedItem.element.classList.remove('selected');
+                selectedItem = null;
+                console.log('Item returned to source via click');
+            }
+        });
+    }
 
     // 2. Targets Container (Grid)
     const targetsContainer = document.createElement('div');
@@ -932,6 +535,27 @@ function renderDragDropQuestion(question) {
         // Inner Drop Box
         const dropBox = document.createElement('div');
         dropBox.className = 'dnd-drop-box';
+
+        // Click to drop selected item
+        if (!isReviewMode) {
+            dropBox.addEventListener('click', function (e) {
+                if (selectedItem && selectedItem.questionId === question.id) {
+                    // Move item to this drop box
+                    dropBox.appendChild(selectedItem.element);
+
+                    // Update answer
+                    const targetId = parseInt(zoneWrapper.getAttribute('data-target-id'));
+                    if (!userAnswers[question.id]) userAnswers[question.id] = {};
+                    userAnswers[question.id][selectedItem.element.id] = targetId;
+
+                    // Deselect
+                    selectedItem.element.classList.remove('selected');
+                    selectedItem = null;
+                    console.log('Item placed via click');
+                }
+            });
+        }
+
         zoneWrapper.appendChild(dropBox);
 
         targetsContainer.appendChild(zoneWrapper);
@@ -962,6 +586,108 @@ function renderDragDropQuestion(question) {
                 this.classList.remove('dragging');
                 document.querySelectorAll('.dnd-drop-box, .dnd-source').forEach(el => el.classList.remove('drag-over'));
             });
+
+            // Touch events for mobile
+            let touchStartY = 0;
+            let touchStartX = 0;
+            let isDragging = false;
+
+            itemEl.addEventListener('touchstart', function (e) {
+                console.log('Touch started:', item.id);
+                const touch = e.touches[0];
+                touchStartX = touch.clientX;
+                touchStartY = touch.clientY;
+                isDragging = false;
+
+                // Don't set as dragging yet - wait for touchmove
+            });
+
+            itemEl.addEventListener('touchmove', function (e) {
+                const touch = e.touches[0];
+                const deltaX = Math.abs(touch.clientX - touchStartX);
+                const deltaY = Math.abs(touch.clientY - touchStartY);
+
+                // Only start dragging if moved more than 10px
+                if (deltaX > 10 || deltaY > 10) {
+                    isDragging = true;
+                    e.preventDefault();
+
+                    if (!this.classList.contains('dragging')) {
+                        currentDraggedItem = item;
+                        this.classList.add('dragging');
+                    }
+
+                    const elementBelow = document.elementFromPoint(touch.clientX, touch.clientY);
+
+                    // Remove previous drag-over
+                    document.querySelectorAll('.drag-over').forEach(el => el.classList.remove('drag-over'));
+
+                    // Add drag-over to valid target
+                    const dropTarget = elementBelow?.closest('.dnd-drop-box, .dnd-source');
+                    if (dropTarget) {
+                        dropTarget.classList.add('drag-over');
+                    }
+                }
+            });
+
+            itemEl.addEventListener('touchend', function (e) {
+                console.log('Touch ended, isDragging:', isDragging);
+
+                if (isDragging) {
+                    // Handle drag and drop
+                    const touch = e.changedTouches[0];
+                    const elementBelow = document.elementFromPoint(touch.clientX, touch.clientY);
+                    const dropTarget = elementBelow?.closest('.dnd-drop-box, .dnd-source');
+
+                    if (dropTarget) {
+                        // Move item
+                        dropTarget.appendChild(itemEl);
+
+                        // Update answer
+                        if (dropTarget.classList.contains('dnd-source')) {
+                            if (!userAnswers[question.id]) userAnswers[question.id] = {};
+                            userAnswers[question.id][itemEl.id] = null;
+                        } else {
+                            const wrapper = dropTarget.closest('.dnd-zone');
+                            if (wrapper) {
+                                const targetId = wrapper.getAttribute('data-target-id');
+                                const numericId = parseInt(targetId);
+                                if (!userAnswers[question.id]) userAnswers[question.id] = {};
+                                userAnswers[question.id][itemEl.id] = numericId;
+                                console.log('Touch saved answer:', itemEl.id, '=', numericId);
+                            }
+                        }
+                    }
+
+                    this.classList.remove('dragging');
+                    currentDraggedItem = null;
+                    document.querySelectorAll('.drag-over').forEach(el => el.classList.remove('drag-over'));
+                } else {
+                    // Handle tap (click to select)
+                    // Deselect previous item
+                    document.querySelectorAll('.draggable-item.selected').forEach(el => el.classList.remove('selected'));
+
+                    // Select this item
+                    this.classList.add('selected');
+                    selectedItem = { element: itemEl, data: item, questionId: question.id };
+                    console.log('Item selected via tap:', item.id);
+                }
+
+                isDragging = false;
+            });
+
+            // Click to select item
+            itemEl.addEventListener('click', function (e) {
+                e.stopPropagation();
+
+                // Deselect previous item
+                document.querySelectorAll('.draggable-item.selected').forEach(el => el.classList.remove('selected'));
+
+                // Select this item
+                this.classList.add('selected');
+                selectedItem = { element: itemEl, data: item, questionId: question.id };
+                console.log('Item selected:', item.id);
+            });
         } else {
             itemEl.setAttribute('draggable', 'false');
         }
@@ -971,7 +697,8 @@ function renderDragDropQuestion(question) {
 
         if (isReviewMode) {
             const correctTarget = item.correctTarget;
-            if (currentLoc && currentLoc !== 'source') {
+            // Only mark as correct/wrong if item is required (not explicitly false)
+            if (item.required !== false && currentLoc && currentLoc !== 'source') {
                 if (currentLoc == correctTarget) itemEl.classList.add('correct-place');
                 else itemEl.classList.add('wrong-place');
             }
@@ -1306,4 +1033,3 @@ function resetToFullQuiz() {
     resultScreen.classList.remove('active');
     startScreen.classList.add('active');
 }
-

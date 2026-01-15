@@ -9,11 +9,10 @@ const quizzes = [
     },
     {
         id: 2,
-        title: 'Chủ đề 2: Sắp ra mắt',
-        description: 'Nội dung đang được cập nhật...',
-        questionCount: 0,
-        file: '#',
-        disabled: true
+        title: 'Chủ đề 2: Quan niệm của chủ nghĩa duy vật biện chứng về vật chất, ý thức',
+        description: 'Tìm hiểu về quan điểm của chủ nghĩa duy vật biện chứng về vật chất, ý thức và mối quan hệ giữa chúng trong quá trình nhận thức và thực tiễn.',
+        questionCount: 29,
+        file: 'quiz2.html'
     },
     {
         id: 3,

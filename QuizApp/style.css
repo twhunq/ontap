@@ -76,6 +76,7 @@ h1 {
     font-weight: 700;
     margin-bottom: 8px;
     background: linear-gradient(135deg, var(--primary-color), #ec4899);
+    background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
@@ -210,6 +211,8 @@ button {
     background: var(--surface);
     flex: 1;
     padding: 30px;
+    padding-bottom: 100px;
+    /* Space for fixed footer */
     display: flex;
     flex-direction: column;
 }
@@ -278,10 +281,23 @@ button {
     text-indent: -9999px;
 }
 
+/* Checkbox style for multiple choice */
+.option-marker.checkbox {
+    border-radius: 6px;
+}
+
 .option-card.selected .option-marker {
     background: var(--primary-color);
     border-color: var(--primary-color);
     color: white;
+}
+
+/* Show checkmark for selected checkbox */
+.option-card.selected .option-marker.checkbox::after {
+    content: "✓";
+    font-size: 18px;
+    text-indent: 0;
+    display: block;
 }
 
 .option-card.correct .option-marker {
@@ -314,13 +330,20 @@ button {
 }
 
 .quiz-footer {
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    max-width: 800px;
+    width: 100%;
     background: var(--surface);
     padding: 20px;
-    border-radius: 0 0 var(--radius) var(--radius);
     border-top: 1px solid var(--border);
     display: flex;
     justify-content: space-between;
     align-items: center;
+    box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.1);
+    z-index: 100;
 }
 
 .nav-btn {
@@ -567,6 +590,12 @@ button {
 
 .draggable-item.dragging {
     opacity: 0.4;
+}
+
+.draggable-item.selected {
+    border: 2px solid var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.2);
+    transform: scale(1.02);
 }
 
 .dnd-drop-box .draggable-item {
