@@ -27,6 +27,13 @@ const quizzes = [
         description: 'Các giai đoạn thiết kế, công cụ CAD (SPICE, Cadence) và phương pháp luận trong VLSI.',
         questionCount: 21,
         file: 'quiz4.html'
+    },
+    {
+        id: 5,
+        title: 'Bài 5: Vật liệu và Chế tạo',
+        description: 'Tìm hiểu về tinh thể silicon, quang khắc và quy trình chế tạo IC',
+        questionCount: 19,
+        file: 'quiz5.html'
     }
 ];
 
