@@ -1,0 +1,43 @@
+/* Additional styles for subject page */
+
+.back-home-link {
+    display: inline-block;
+    margin-top: 20px;
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1rem;
+    padding: 10px 20px;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.1);
+    transition: all 0.3s ease;
+}
+
+.back-home-link:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: translateX(-4px);
+}
+
+/* Override quiz-list to use grid layout */
+.quiz-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 30px;
+    flex: 1;
+    margin-bottom: 40px;
+}
+
+/* Make quiz cards look consistent */
+.quiz-card h2 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin-bottom: 12px;
+    color: var(--text-primary);
+}
+
+@media (max-width: 768px) {
+    .quiz-list {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+}

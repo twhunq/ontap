@@ -554,22 +554,28 @@ function retryWrongAnswers() {
     // Save original answers before retry
     originalUserAnswers = JSON.parse(JSON.stringify(userAnswers));
 
-    // Clear answers for wrong questions only
+    // Clear answers for wrong questions only (keep correct answers)
     wrongQuestions.forEach(idx => {
         const q = questions[idx];
         delete userAnswers[q.id];
     });
 
-    // Set up filtered quiz with only wrong questions
+    // Set up filtered quiz with only wrong questions in RETRY mode
     filteredQuestions = wrongQuestions;
     currentFilteredIndex = 0;
     currentQuestionIndex = wrongQuestions[0];
-    isReviewMode = false;
+    isReviewMode = false; // Not review mode
     isRetryMode = true; // Enable retry mode
 
     // Switch to quiz screen
     resultScreen.classList.remove('active');
     quizScreen.classList.add('active');
+
+    // Hide filter buttons (not needed in retry mode)
+    const filterContainer = document.getElementById('review-filters');
+    if (filterContainer) {
+        filterContainer.classList.add('hidden');
+    }
 
     // Update total questions display
     totalQNum.innerText = wrongQuestions.length;
@@ -582,7 +588,6 @@ function retryWrongAnswers() {
 function startReview() {
     resultScreen.classList.remove('active');
     quizScreen.classList.add('active');
-    currentQuestionIndex = 0;
     isReviewMode = true;
 
     // Show filter buttons
@@ -603,13 +608,19 @@ function startReview() {
                 applyReviewFilter(filter);
             });
         });
+
+        // Set "Câu sai" as active by default
+        filterBtns.forEach(b => b.classList.remove('active'));
+        const wrongBtn = filterContainer.querySelector('.filter-btn[data-filter="wrong"]');
+        if (wrongBtn) wrongBtn.classList.add('active');
     }
 
     // Show back to results button
     showBackToResultsButton();
 
-    renderQuestion();
-    updateProgress();
+    // Apply "wrong" filter by default to show only incorrect answers
+    applyReviewFilter('wrong');
+
     submitBtn.classList.add('hidden');
     nextBtn.classList.remove('hidden');
 }
@@ -661,11 +672,24 @@ function applyReviewFilter(filter) {
     }
 
     if (filteredQuestions.length === 0) {
-        alert('Không có câu hỏi nào phù hợp với bộ lọc này!');
-        // Reset to all
-        filteredQuestions = questions.map((q, idx) => idx);
-        document.querySelector('.filter-btn[data-filter="all"]').click();
-        return;
+        if (filter === 'wrong') {
+            // If no wrong answers, show congratulations and switch to all
+            alert('Chúc mừng! Bạn đã trả lời đúng tất cả các câu! 🎉');
+            filteredQuestions = questions.map((q, idx) => idx);
+            // Update active button to "all"
+            const allBtn = document.querySelector('.filter-btn[data-filter="all"]');
+            const filterBtns = document.querySelectorAll('.filter-btn');
+            filterBtns.forEach(b => b.classList.remove('active'));
+            if (allBtn) allBtn.classList.add('active');
+        } else {
+            alert('Không có câu hỏi nào phù hợp với bộ lọc này!');
+            // Reset to all
+            filteredQuestions = questions.map((q, idx) => idx);
+            const allBtn = document.querySelector('.filter-btn[data-filter="all"]');
+            const filterBtns = document.querySelectorAll('.filter-btn');
+            filterBtns.forEach(b => b.classList.remove('active'));
+            if (allBtn) allBtn.classList.add('active');
+        }
     }
 
     currentFilteredIndex = 0;
