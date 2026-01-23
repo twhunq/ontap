@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài 9 - Biến thiên và Độ tin cậy</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../style.css">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+
+<body>
+    <div class="app-container">
+        <!-- Start Screen -->
+        <div id="start-screen" class="screen active">
+            <div class="content-box">
+                <h1>Bài 9: Biến thiên và Độ tin cậy</h1>
+                <p class="subtitle">Khái niệm về PVT, Yeild và Độ tin cậy trong thiết kế vi mạch</p>
+                <div class="info-badges">
+                    <span class="badge">28 Câu Hỏi</span>
+                    <span class="badge">Trắc Nghiệm</span>
+                </div>
+                <div style="display: flex; gap: 12px; justify-content: center; margin-top: 24px;">
+                    <button id="start-btn" class="primary-btn">Đề Gốc</button>
+                    <button id="shuffle-btn" class="secondary-btn">Kiểm Tra</button>
+                </div>
+                <a href="index.html" class="back-home">← Về danh sách bài</a>
+            </div>
+        </div>
+
+        <!-- Quiz Screen -->
+        <div id="quiz-screen" class="screen">
+            <header class="quiz-header">
+                <div class="progress-container">
+                    <div class="progress-bar" id="progress-bar"></div>
+                </div>
+                <div class="question-status">
+                    Câu <span id="current-question-num">1</span>/<span id="total-questions">28</span>
+                </div>
+
+                <!-- Filter buttons for review mode -->
+                <div class="review-filters hidden" id="review-filters">
+                    <button class="filter-btn active" data-filter="all">Tất cả</button>
+                    <button class="filter-btn" data-filter="correct">Câu đúng</button>
+                    <button class="filter-btn" data-filter="wrong">Câu sai</button>
+                </div>
+            </header>
+
+            <div class="question-container" id="question-container">
+                <!-- Question content injected by JS -->
+            </div>
+
+            <footer class="quiz-footer">
+                <button id="prev-btn" class="nav-btn" disabled>Quay Lại</button>
+                <div class="footer-actions">
+                    <button id="next-btn" class="nav-btn primary">Tiếp Theo</button>
+                    <button id="submit-btn" class="nav-btn finish hidden">Nộp Bài</button>
+                </div>
+            </footer>
+        </div>
+
+        <!-- Result Screen -->
+        <div id="result-screen" class="screen">
+            <div class="content-box result-box">
+                <h2>Kết Quả</h2>
+                <div class="score-circle">
+                    <span id="score-display">0</span>
+                    <span class="score-label">Điểm</span>
+                </div>
+                <p id="result-message">Bạn đã hoàn thành bài kiểm tra!</p>
+                <div class="result-actions">
+                    <button id="review-btn" class="secondary-btn">Xem Đáp Án</button>
+                    <button id="retry-wrong-btn" class="secondary-btn retry-wrong">Làm Lại Câu Sai</button>
+                    <button id="retry-btn" class="primary-btn">Làm Lại Toàn Bộ</button>
+                    <a href="index.html" class="back-home-btn">Về danh sách bài</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="quiz9.js"></script>
+</body>
+
+</html>

@@ -34,6 +34,34 @@ const quizzes = [
         description: 'Tìm hiểu về tinh thể silicon, quang khắc và quy trình chế tạo IC',
         questionCount: 19,
         file: 'quiz5.html'
+    },
+    {
+        id: 6,
+        title: 'Bài 6: Độ trễ và Công suất',
+        description: 'Khái niệm về độ trễ lan truyền, độ trễ ô nhiễm và công suất trong mạch CMOS',
+        questionCount: 18,
+        file: 'quiz6.html'
+    },
+    {
+        id: 7,
+        title: 'Bài 7: Công suất và Tối ưu hóa',
+        description: 'Khái niệm về công suất tĩnh, công suất động và các kỹ thuật tối ưu hóa',
+        questionCount: 19,
+        file: 'quiz7.html'
+    },
+    {
+        id: 8,
+        title: 'Bài 8: Dây dẫn và Kết nối',
+        description: 'Hiểu về vai trò, các hiệu ứng ký sinh và tối ưu hóa dây dẫn trong vi mạch',
+        questionCount: 21,
+        file: 'quiz8.html'
+    },
+    {
+        id: 9,
+        title: 'Bài 9: Biến thiên và Độ tin cậy',
+        description: 'Khái niệm về PVT, Yeild và Độ tin cậy trong thiết kế vi mạch',
+        questionCount: 28,
+        file: 'quiz9.html'
     }
 ];
 
